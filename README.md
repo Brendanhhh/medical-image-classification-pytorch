@@ -1,14 +1,31 @@
-# Medical Image Classification (PyTorch)
+Medical Image Classification (PyTorch)
 
 Multi-class medical image classification using EfficientNet-B0 transfer learning in PyTorch.
-Developed for the Kaggle competition `msu-cse-404-fs-25-project`.
+Developed for the Kaggle competition msu-cse-404-fs-25-project.
 
-## Highlights
-- Model: EfficientNet-B0 (ImageNet pretrained)
-- Training: AMP mixed precision, AdamW optimizer, cosine annealing warm restarts
-- Augmentation: Random resized crop, horizontal flip, rotation, color jitter
-- Validation Accuracy: ~0.83 on held-out validation set (varies by run)
-- Package Management: uv
+Highlights
+
+Model: EfficientNet-B0 (ImageNet pretrained)
+
+Training: AMP mixed precision, AdamW optimizer, cosine annealing warm restarts
+
+Augmentation: Random resized crop, horizontal flip, rotation, color jitter
+
+Validation Accuracy: ~0.83 on held-out validation set (varies by run)
+
+Package Management: uv
+
+Task Definition
+
+This project performs single-label, multi-class image classification on a medical imaging dataset with anonymized class labels.
+
+Each image is assigned to one of ~21 dataset-defined categories
+
+Class labels are represented as opaque alphanumeric identifiers
+
+No mapping from label → diagnosis, condition, or modality is provided
+
+As a result, the model learns to distinguish visual patterns associated with dataset-specific categories, rather than predicting human-interpretable medical conditions. The project emphasizes model design, training stability, and generalization, not clinical inference.
 
 ## Project Structure
 
